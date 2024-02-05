@@ -5,14 +5,21 @@
     box-sizing: border-box;
 }
 
+/* Define color variables */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #343a40;
+    --text-color: #333;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f8f9fa;
+    background-color: #ededed;
 }
 
 header {
-    background-color: #343a40;
+    background-color: var(--secondary-color);
     color: #fff;
     padding: 1rem;
     text-align: center;
@@ -59,10 +66,13 @@ main {
     }
 }
 
-
-#left-panel h1 {
+/* Update navigation styles */
+#left-panel {
+    background-color: var(--secondary-color);
     color: #fff;
-    margin-bottom: 20px;
+    padding: 20px;
+    overflow-y: auto;
+    font-size: 1.2rem;
 }
 
 #left-panel ul {
@@ -78,7 +88,7 @@ main {
     color: #fff;
     text-decoration: none;
     display: block; /* Make the link a block element to occupy full width */
-    padding: 10px; /* Add padding for better clickability */
+    padding: 20px; /* Add padding for better clickability */
     border-radius: 5px; /* Add border radius for rounded corners */
     transition: transform 0.3s ease-in-out; /* Add transition for smooth animation */
 }
@@ -88,16 +98,15 @@ main {
     transform: scale(1.1); /* Scale up the button on hover */
 }
 
-
-footer {
-    background-color: #343a40;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-}
-
+/* Update section styles */
 section {
     margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ededed;
+    box-shadow:  7px 7px 14px #c9c9c9,
+             -7px -7px 14px #ffffff;
+    color: var(--text-color);
 }
 
 section h2 {
@@ -106,10 +115,11 @@ section h2 {
 }
 
 .about-class {
-    background-color: #fff;
+    background-color: #ededed;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 7px 7px 14px #c9c9c9,
+            inset -7px -7px 14px #ffffff;
 }
 
 .project-class {
@@ -117,23 +127,25 @@ section h2 {
 }
 
 .project-class {
-    background-color: #fff;
+    background-color: #ededed;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 15px;
+    box-shadow: inset 7px 7px 14px #c9c9c9,
+            inset -7px -7px 14px #ffffff;
+    margin-bottom: 20px;
 }
 
 .project-class h3 {
-    color: #007bff;
+    color: #008cff;
     margin-bottom: 10px;
 }
 
 .experience-class {
-    background-color: #fff;
+    background-color: #ededed;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 7px 7px 14px #c9c9c9,
+            inset -7px -7px 14px #ffffff;
 }
 
 .experience-class h3 {
@@ -146,10 +158,11 @@ section h2 {
 }
 
 .courses-class {
-    background-color: #fff;
+    background-color: #ededed;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 7px 7px 14px #c9c9c9,
+            inset -7px -7px 14px #ffffff;
 }
 
 .courses-class p {
@@ -162,11 +175,20 @@ section h2 {
     margin-bottom: 10px;
 }
 
-.achievements-class {
-    background-color: #fff;
+#achievements {
+    background-color: #ededed;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 7px 7px 14px #c9c9c9,
+            -7px -7px 14px #ffffff;
+}
+
+.achievements-class {
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #ededed;
+    box-shadow: inset 7px 7px 14px #c9c9c9,
+             inset -7px -7px 14px #ffffff;
 }
 
 .achievements ul {
@@ -181,7 +203,7 @@ footer {
     text-align: center;
 }
 
-/* Add animation CSS */
+/* Update header animation */
 @keyframes slideIn {
     from {
         transform: translateY(-100%);
@@ -191,7 +213,57 @@ footer {
     }
 }
 
-/* Add smooth scrolling CSS */
-html {
-    scroll-behavior: smooth;
+.mail-icon img {
+    transition: opacity 0.3s ease;
+}
+
+.mail-icon:hover img {
+    opacity: 0.7;
+    /* For 3d effect when hovered the icon magnifies */
+    /* transform: scale(1.2); */
+}
+
+.github-icon img {
+    transition: opacity 0.3s ease;
+}
+
+.github-icon:hover img {
+    opacity: 0.7;
+    transform: scale(1.2);
+}
+
+.linkedin-icon img {
+    transition: opacity 0.3s ease;
+}
+
+.linkedin-icon:hover img {
+    opacity: 0.7;
+    transform: scale(1.2);
+}
+
+.icon-container {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+/* Update icon styles */
+.icon-container a {
+    display: inline-block;
+    background-color: #ededed;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 7px 7px 14px #c9c9c9, -7px -7px 14px #ffffff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Update icon hover styles */
+.icon-container a:hover {
+    transform: scale(1.1);
+    box-shadow: 5px 5px 10px #c9c9c9, -5px -5px 10px #ffffff;
+}
+
+/* On click */
+.icon-container a:active {
+    transform: scale(0.9);
+    box-shadow: inset 3px 3px 6px #c9c9c9, inset -3px -3px 6px #ffffff;
 }
