@@ -20,14 +20,17 @@ header {
 
 header h1 {
     margin-bottom: 10px;
+    margin-left: 200px; /* Match the width of the left panel */
 }
 
 main {
     padding: 20px;
+    margin-left: 200px; /* Match the width of the left panel */
 }
 
 /* CSS Styles for Left Panel Navigation */
 #left-panel {
+    display: block; /* Set initial display to block */
     position: fixed;
     top: 0;
     left: 0;
@@ -38,6 +41,24 @@ main {
     padding: 20px;
     overflow-y: auto; /* Enable scrolling for the navigation panel */
 }
+
+
+@media screen and (max-width: 700px) {
+    /* Hide the left panel when screen width is smaller than 700 pixels */
+    #left-panel {
+        display: none;
+    }
+
+    /* Adjust content width when left panel is hidden */
+    main {
+        margin-left: 0; /* Remove margin when left panel is hidden */
+    }
+
+    header h1 {
+        margin-left: 0px; /* Match the width of the left panel */
+    }
+}
+
 
 #left-panel h1 {
     color: #fff;
@@ -67,11 +88,6 @@ main {
     transform: scale(1.1); /* Scale up the button on hover */
 }
 
-
-main {
-    margin-left: 220px; /* Adjust margin to accommodate the fixed left panel */
-    padding: 20px;
-}
 
 footer {
     background-color: #343a40;
