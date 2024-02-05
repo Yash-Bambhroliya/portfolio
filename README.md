@@ -7,11 +7,11 @@
 I am seeking opportunities in machine learning, web app development, and mobile app development to leverage my technical skills for the growth of the organization while advancing my personal and professional development.
 
 ## Projects
-1. **Image Classification using Deep Learning (Solo Project)** | Python, Machine Learning (ML)
+1. **Image Classification using Deep Learning** | Python, Machine Learning (ML)
    - Developed, built, and trained an image classifier using deep-learning techniques.
    - Technologies: Python, PyTorch, neural networks, transfer learning, data preprocessing, model selection, model training and evaluation, fine-tuning, model deployment.
 
-2. **Image Classifier Testing (Solo Project)** | Python, Machine Learning (ML)
+2. **Image Classifier Testing** | Python, Machine Learning (ML)
    - Developed a custom picture classifier using Convolutional Neural Networks (CNNs) like VGG16, AlexNet, and ResNet18.
    - Explored Python libraries such as os, time, PIL, torch.
 
