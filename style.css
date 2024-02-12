@@ -35,7 +35,6 @@ main {
     margin-left: 200px; /* Match the width of the left panel */
 }
 
-/* CSS Styles for Left Panel Navigation */
 #left-panel {
     display: block; /* Set initial display to block */
     position: fixed;
@@ -63,7 +62,10 @@ main {
     color: #fff;
     text-decoration: none;
     display: block; /* Make the link a block element to occupy full width */
-    padding: 20px; /* Add padding for better clickability */
+    padding: 10px; /* Add padding for better clickability */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
     border-radius: 5px; /* Add border radius for rounded corners */
     transition: transform 0.1s ease-in-out; /* Add transition for smooth animation */
     box-shadow: 7px 7px 14px #262626, -7px -7px 14px #6666669b;
@@ -82,9 +84,6 @@ main {
     transform: scale(0.9);
 }
 
-p {
-    text-align: justify;
-}
 
 /* Update section styles */
 section {
@@ -197,6 +196,7 @@ section:hover .section-title-letter {
 footer {
     background-color: #343a40;
     color: #fff;
+    margin-left: 200px; /* Match the width of the left panel */
     padding: 1rem;
     text-align: center;
 }
@@ -217,8 +217,7 @@ footer {
 
 .mail-icon:hover img {
     opacity: 0.7;
-    /* For 3d effect when hovered the icon magnifies */
-    /* transform: scale(1.2); */
+    transform: scale(1.2);
 }
 
 .github-icon img {
@@ -227,7 +226,7 @@ footer {
 
 .github-icon:hover img {
     opacity: 0.7;
-    /* transform: scale(1.2); */
+    transform: scale(1.2);
 }
 
 .linkedin-icon img {
@@ -236,7 +235,7 @@ footer {
 
 .linkedin-icon:hover img {
     opacity: 0.7;
-    /* transform: scale(1.2); */
+    transform: scale(1.2);
 }
 
 .icon-container {
@@ -245,7 +244,6 @@ footer {
     justify-content: space-between;
     width: 300px;
 }
-/* Update icon styles */
 .icon-container a {
     display: inline-block;
     background-color: #ededed;
@@ -286,27 +284,6 @@ text {
 
     header {
         margin-left: 0px; /* Match the width of the left panel */
-        display: flex; /* Use flexbox to layout header contents */
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items horizontally */
-    }
-
-    #left-panel {
-        width: 100%; /* Make the navigation panel take full width */
-        text-align: center; /* Center the navigation links */
-        padding: 0; /* Remove padding */
-    }
-
-    #left-panel ul {
-        display: flex; /* Make the list items flex container */
-        justify-content: center; /* Center the list items horizontally */
-        flex-wrap: wrap; /* Allow items to wrap to next line if needed */
-        list-style: none; /* Remove default list styles */
-        padding: 0; /* Remove padding */
-    }
-
-    #left-panel ul li {
-        margin: 0 10px; /* Add some spacing between list items */
     }
 
     .icon-container {

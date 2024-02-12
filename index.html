@@ -45,7 +45,7 @@
     </header>
 
     <main>
-        <section id="about">
+        <section id="about" style="text-align: justify;">
             <h2>
                 <!-- About Me -->
                 <span class="section-title-letter">A</span>
@@ -60,7 +60,7 @@
             <p class="content-class">Looking for an opportunity in machine learning, web app development and mobile app development to utilize my technical skills for fostering the growth of the organization, while simultaneously advancing my personal and professional development.</p>
         </section>
 
-        <section id="projects">
+        <section id="projects" style="text-align: justify;">
             <h2>
                 <!-- Projects -->
                 <span class="section-title-letter">P</span>
@@ -112,7 +112,7 @@
                 <span class="section-title-letter">c</span>
                 <span class="section-title-letter">e</span>
             </h2>
-            <div class="content-class">
+            <div class="content-class" style="text-align: justify;">
                 <h3>Research Internship In Blockchain (May–June 2023)</h3>
                 <p>Collaborated with two professors in a blockchain technology internship and developed a <b>D</b>ecentralized <b>M</b>ultimedia <b>M</b>essaging Application <b>(DMM APP)</b> specifically for educational institutions mentioned in the projects above.</p>
                 <p>I also sharpened my soft skills like communication, presentation, time punctuation, working under pressure while meeting deadlines, etc.</p>
@@ -195,47 +195,52 @@
         <p>&copy; 2024 Yash Bambhroliya. All rights reserved.</p>
     </footer>
 
-<!-- FILTERS -->
-<svg>
-    <filter id="distortion">
-        <feTurbulence type="turbulence" baseFrequency="0.05" numOctaves="2" result="turbulence"/>
-        <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="20" xChannelSelector="R" yChannelSelector="G"/>
-    </filter>
+    <audio id="clickSound">
+        <source src="images/water-plop.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    
+    <!-- FILTERS -->
+    <svg>
+        <filter id="distortion">
+            <feTurbulence type="turbulence" baseFrequency="0.05" numOctaves="2" result="turbulence"/>
+            <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="20" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
 
-    <filter id="textFilter">        
-        <!-- dark edge -->
-        <feMorphology operator="dilate" radius="4" in="SourceAlpha" result="dark_edge_01" />
-        <feOffset dx="5" dy="5" in="dark_edge_01" result="dark_edge_03"/>
-        <feFlood flood-color="rgba(0,0,0,.5)" result="dark_edge_04" />
-        <feComposite in="dark_edge_04" in2="dark_edge_03" operator="in" result="dark_edge" />
+        <filter id="textFilter">        
+            <!-- dark edge -->
+            <feMorphology operator="dilate" radius="4" in="SourceAlpha" result="dark_edge_01" />
+            <feOffset dx="5" dy="5" in="dark_edge_01" result="dark_edge_03"/>
+            <feFlood flood-color="rgba(0,0,0,.5)" result="dark_edge_04" />
+            <feComposite in="dark_edge_04" in2="dark_edge_03" operator="in" result="dark_edge" />
 
-        <!-- light edge -->
-        <feMorphology operator="dilate" radius="4" in="SourceAlpha" result="light_edge_01" />
-        <feOffset dx="-2" dy="-2" in="light_edge_01" result="light_edge_03"/>
-        <feFlood flood-color="rgba(255,255,255,.5)" result="light_edge_04" />
-        <feComposite in="light_edge_04" in2="light_edge_03" operator="in" result="light_edge" />
+            <!-- light edge -->
+            <feMorphology operator="dilate" radius="4" in="SourceAlpha" result="light_edge_01" />
+            <feOffset dx="-2" dy="-2" in="light_edge_01" result="light_edge_03"/>
+            <feFlood flood-color="rgba(255,255,255,.5)" result="light_edge_04" />
+            <feComposite in="light_edge_04" in2="light_edge_03" operator="in" result="light_edge" />
 
-        <!-- edges together -->
-        <feMerge result="edges">
-            <feMergeNode in="dark_edge" />
-            <feMergeNode in="light_edge" />
-        </feMerge>
-        <feComposite in="edges" in2="SourceGraphic" operator="out" result="edges_complete" />
+            <!-- edges together -->
+            <feMerge result="edges">
+                <feMergeNode in="dark_edge" />
+                <feMergeNode in="light_edge" />
+            </feMerge>
+            <feComposite in="edges" in2="SourceGraphic" operator="out" result="edges_complete" />
 
-        <!-- bevel -->
-        <feGaussianBlur stdDeviation="5" result="bevel_blur" />
-        <feSpecularLighting result="bevel_lighting" in="bevel_blur" specularConstant="2.4" specularExponent="13" lighting-color="rgba(60,60,60,.4)">
-            <feDistantLight azimuth="25" elevation="40" />
-        </feSpecularLighting>
-        <feComposite in="bevel_lighting" in2="SourceGraphic" operator="in" result="bevel_complete" />
+            <!-- bevel -->
+            <feGaussianBlur stdDeviation="5" result="bevel_blur" />
+            <feSpecularLighting result="bevel_lighting" in="bevel_blur" specularConstant="2.4" specularExponent="13" lighting-color="rgba(60,60,60,.4)">
+                <feDistantLight azimuth="25" elevation="40" />
+            </feSpecularLighting>
+            <feComposite in="bevel_lighting" in2="SourceGraphic" operator="in" result="bevel_complete" />
 
-        <!-- everything in place -->
-        <feMerge result="complete">
-            <feMergeNode in="edges_complete" />
-            <feMergeNode in="bevel_complete" />
-        </feMerge>
-    </filter>
-</svg>
+            <!-- everything in place -->
+            <feMerge result="complete">
+                <feMergeNode in="edges_complete" />
+                <feMergeNode in="bevel_complete" />
+            </feMerge>
+        </filter>
+    </svg>
     <script src="script.js"></script>
 </body>
 </html>
