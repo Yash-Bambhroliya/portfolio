@@ -150,6 +150,13 @@ section:active .content-class {
     box-shadow: 7px 7px 14px #c9c9c9, -7px -7px 14px #ffffff;
 }
 
+section:hover .section-title-letter {
+    text-shadow: 
+    /* 2px 2px 4px #000000d6, */
+    /* 2px 2px 4px #97979786, */
+     5px 5px 3px #97979786;
+}
+
 .project-class {
     background-color: #ededed;
     padding: 20px;
@@ -261,7 +268,7 @@ footer {
     padding-left: 10px;
     display: flex;
     justify-content: space-between;
-    width: 350px;
+    width: 30%;
 }
 /* Update icon styles */
 .icon-container a {
