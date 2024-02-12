@@ -47,31 +47,6 @@ main {
     color: #fff;
     padding: 20px;
     overflow-y: auto; /* Enable scrolling for the navigation panel */
-}
-
-
-@media screen and (max-width: 700px) {
-    /* Hide the left panel when screen width is smaller than 700 pixels */
-    #left-panel {
-        display: none;
-    }
-
-    /* Adjust content width when left panel is hidden */
-    main {
-        margin-left: 0; /* Remove margin when left panel is hidden */
-    }
-
-    header {
-        margin-left: 0px; /* Match the width of the left panel */
-    }
-}
-
-/* Update navigation styles */
-#left-panel {
-    background-color: var(--secondary-color);
-    color: #fff;
-    padding: 20px;
-    overflow-y: auto;
     font-size: 1.2rem;
 }
 
@@ -107,6 +82,10 @@ main {
     transform: scale(0.9);
 }
 
+p {
+    text-align: justify;
+}
+
 /* Update section styles */
 section {
     margin-bottom: 40px;
@@ -135,7 +114,6 @@ section h2 {
     /* transition: text-shadow 0.3s ease-in-out; */
 }
 
-
 section:hover .project-class {
     box-shadow: 7px 7px 14px #c9c9c9, -7px -7px 14px #ffffff;
 }
@@ -151,10 +129,7 @@ section:active .content-class {
 }
 
 section:hover .section-title-letter {
-    text-shadow: 
-    /* 2px 2px 4px #000000d6, */
-    /* 2px 2px 4px #97979786, */
-     5px 5px 3px #97979786;
+    text-shadow: 5px 5px 3px #97979786;
 }
 
 .project-class {
@@ -268,7 +243,7 @@ footer {
     padding-left: 10px;
     display: flex;
     justify-content: space-between;
-    width: 30%;
+    width: 300px;
 }
 /* Update icon styles */
 .icon-container a {
@@ -296,4 +271,45 @@ text {
     font-size: 150px;
     font-family: 'Oswald', serif;
     font-weight: 900;
+}
+
+@media screen and (max-width: 700px) {
+    /* Hide the left panel when screen width is smaller than 700 pixels */
+    #left-panel {
+        display: none;
+    }
+
+    /* Adjust content width when left panel is hidden */
+    main {
+        margin-left: 0; /* Remove margin when left panel is hidden */
+    }
+
+    header {
+        margin-left: 0px; /* Match the width of the left panel */
+        display: flex; /* Use flexbox to layout header contents */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items horizontally */
+    }
+
+    #left-panel {
+        width: 100%; /* Make the navigation panel take full width */
+        text-align: center; /* Center the navigation links */
+        padding: 0; /* Remove padding */
+    }
+
+    #left-panel ul {
+        display: flex; /* Make the list items flex container */
+        justify-content: center; /* Center the list items horizontally */
+        flex-wrap: wrap; /* Allow items to wrap to next line if needed */
+        list-style: none; /* Remove default list styles */
+        padding: 0; /* Remove padding */
+    }
+
+    #left-panel ul li {
+        margin: 0 10px; /* Add some spacing between list items */
+    }
+
+    .icon-container {
+        width: 100%; /* Make the container take full width */
+    }
 }
